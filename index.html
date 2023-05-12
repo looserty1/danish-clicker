@@ -27,7 +27,7 @@
       localStorage.setItem("score", 0);
       localStorage.setItem("perclick", 1);
     }
-    document.getElementById("score").addEventListener("click", up());
+    document.getElementById("score").addEventListener("click", up);
     function up() {
       let score = parseInt(localStorage.getItem("score"));
       let mod = parseInt(localStorage.getItem("perclick"));
