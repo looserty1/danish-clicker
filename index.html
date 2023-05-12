@@ -4,6 +4,8 @@
     button {
       height: 2vw;
       width: 2vw;
+      border: none;
+      border-radius: 10%;
     }
     #danish {
       position: absolute;
@@ -14,18 +16,18 @@
     }
     #score {
       position: absolute;
-      font-size: 2.5vw;
+      font-size: 4vh;
       text-align: center;
       width: 10vw;
       height: 10vh;
       left: 45vw;
-      top: 20vh;
+      top: 30vh;
     }
   </style>
 </head>
 <body>
-  Price: <p></p><button id="pc"></button> Current: <p></p><br>
-  Price: <p></p><button id="ps"></button> Current: <p></p>
+  <i>Per Click:</i> Price: <container id ="pc-p">100</container>&nbsp;<button id="pc"></button> Current: <container id="pc-c"></container><br>
+  <i>Per Second:</i> Price: <container id="ps-p">100</container>&nbsp;<button id="ps"></button> Current: <container id="ps-c"></container>
   <p id="score">0</p>
   <button id="danish">Click Here</button>
   <script>
