@@ -21,5 +21,22 @@
 </head>
 <body>
   <p id="score">0</p>
-  <button></button>
+  <button id="danish"></button>
+  <script>
+    if (!localStorage.getItem("score")) {
+      localStorage.setItem("score", 0);
+      localStorage.setItem("perclick", 1);
+    }
+    document.getElementById("score").addEventListener("click", up());
+    function up() {
+      let score = localStorage.getItem("score");
+      let mod = localStorage.getItem("perclick");
+      score += mod;
+      localStorage.setItem("score", score);
+      update();
+    }
+    function update() {
+      document.getElementById("score").innerHTML = localStorage.getItem("score");
+    }
+  </script>
 </body>
